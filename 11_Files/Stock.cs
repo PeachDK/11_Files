@@ -1,11 +1,11 @@
 ﻿using System;
 namespace _11_Files
 {
-    internal class Stock
+    internal class Stock : IAsset
     {
-        internal int NumShares;
-        internal double PricePerShare;
-        internal string Symbol;
+        public int NumShares;
+        public double PricePerShare;
+        public string Symbol;
 
         public long Id { get; internal set; }
 
@@ -69,5 +69,6 @@ namespace _11_Files
         {
             return Symbol;
         }
+       
     }
 }

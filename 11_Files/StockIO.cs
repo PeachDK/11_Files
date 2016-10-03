@@ -9,9 +9,42 @@ namespace _11_Files
 {
     class StockIO
     {
-        internal void WriteStock(StringWriter sw, Stock hp)
+        
+        string NL = Environment.NewLine;
+        internal void WriteStock(StringWriter sw, Stock asset)
         {
-            throw new NotImplementedException();
+            sw.Write(asset.Symbol + NL + asset.PricePerShare + NL + asset.NumShares + NL);          
+            
+        }
+
+        internal Stock ReadStock(StringReader data)
+        {
+           
+            Stock datastock = new Stock(data.ReadLine(), Convert.ToDouble(data.ReadLine()) , Convert.ToInt32(data.ReadLine()));
+          
+            return datastock;
+        }
+        internal Stock ReadStock(FileInfo output)
+        {
+            string s = "";         
+            using (StreamReader fs = output.OpenText())
+            {
+               s = fs.ReadToEnd();             
+
+            }
+
+            string[] data = s.Split();
+
+            Stock datastock = new Stock(data[0], Convert.ToDouble(data[1]), Convert.ToInt32(data[2]));
+            return datastock;
+        }
+
+        internal void WriteStock(FileInfo output, Stock asset)
+        {            
+            using (StreamWriter writer = output.AppendText())
+            {
+                writer.WriteLine(asset.Symbol + " " + asset.PricePerShare + " " + asset.NumShares);
+            }
         }
     }
 }

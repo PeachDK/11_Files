@@ -25,7 +25,7 @@ namespace _11_Files
             Assert.AreEqual("HP" + NL + "11,4" + NL + "10" + NL, sw.ToString());
         }
 
-  /*    [TestMethod]
+      [TestMethod]
         public void CanWriteStockYahoo()
         {
             StockIO io = new StockIO();
@@ -34,7 +34,7 @@ namespace _11_Files
             Assert.AreEqual("YHOO" + NL + "57,2" + NL + "30" + NL, sw.ToString());
         }
 
-        [TestMethod]
+       [TestMethod]
         public void CanReadStock()
         {
             StockIO io = new StockIO();
@@ -52,7 +52,7 @@ namespace _11_Files
         }
 
 
-        [TestMethod]
+       [TestMethod]
         public void CanWriteToFile()
         {
             FileInfo output = new FileInfo("stockout.txt");
@@ -69,7 +69,7 @@ namespace _11_Files
                 output.Delete();
             }
         }
-*/
+
 
     }
 }
