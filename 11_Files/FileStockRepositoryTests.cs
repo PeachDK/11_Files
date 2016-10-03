@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Collections;
-/*
+
 namespace _11_Files
 {
     [TestClass]
@@ -32,7 +32,7 @@ namespace _11_Files
 
         }
 
-        [TestMethod]
+       [TestMethod]
         public void CreateRepository()
         {
             IStockRepository repository;
@@ -49,7 +49,7 @@ namespace _11_Files
             Assert.AreEqual("stock456.txt", repository.StockFileName(hp));
         }
 
-        [TestMethod]
+       [TestMethod]
         public void CanSaveStockWritesToFile()
         {
             IFileRepository repository = new FileStockRepository(repositoryDir);
@@ -59,7 +59,7 @@ namespace _11_Files
             Assert.IsTrue(fileYhoo.Exists);
         }
 
-        [TestMethod]
+       [TestMethod]
         public void CanSaveAndLoad()
         {
             IStockRepository repository = new FileStockRepository(repositoryDir);
@@ -112,6 +112,6 @@ namespace _11_Files
             stocks = repository.FindAllStocks();
             Assert.AreEqual(2, stocks.Count);
         }
+        
     }
 }
-*/
