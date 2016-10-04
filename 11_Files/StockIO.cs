@@ -14,7 +14,7 @@ namespace _11_Files
         internal void WriteStock(StringWriter sw, Stock asset)
         {
             sw.Write(asset.Symbol + NL + asset.PricePerShare + NL + asset.NumShares + NL);          
-            
+             
         }
 
         internal Stock ReadStock(StringReader data)
